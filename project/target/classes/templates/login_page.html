@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: #f0f1f2;">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Login Form</h2>
+            <p class="text-center text-dark mt-2">Login to your Page</p>
+            <div class="card my-5">
+    
+              <form class="card-body cardbody-color p-lg-5" method="post" action="/login" th:object="${loginRequest}">
+    
+                <div class="mb-3">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  <input type="text" class="form-control" id="Username" name="login" placeholder="User Name" required>
+                </div>
+                <div class="mb-3">
+                    <i class="fa fa-unlock" aria-hidden="true"></i>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain one number one uppercase and one lowercase letter, and at leat 8 or more characters" required>
+                
+
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-dark px-5 mb-5 w-100">Login</button></div>
+                <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
+                  Registered? <a href="/register" class="text-dark fw-bold"> Create an
+                    Account</a>
+                </div>
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"> </script>
+
+   
+</body>
+</html>
